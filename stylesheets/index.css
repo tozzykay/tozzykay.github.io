@@ -1,0 +1,403 @@
+body {
+	font-family: Roboto, Georgia, "Times New Roman", Times, serif;
+	margin: 55px 0px 0px 0px;
+}
+
+section {
+	padding: 25px;
+}
+
+.intro {
+	background-image: url("../images/back.png");
+	background-color: #cfd4e2;
+	background-repeat: no-repeat;
+	background-size: 1000px;
+	background-position: bottom;
+	background-position-x: 500px;
+	padding: 25px;
+	color: rgb(9, 50, 104);
+
+	border-bottom: 1px red solid;
+}
+h1 {
+	font-size: 55px;
+	margin-top: 0px;
+}
+#candidates {
+	/* background-image: url("background.jpeg"); */
+	/* background-size: cover; */
+	/* display: inline-block; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	column-gap: 10px;
+}
+h2 {
+	font-size: 40px;
+}
+#candidates h2 {
+	color: rgb(11, 67, 141);
+}
+#candidates > div {
+	display: flex;
+}
+.candidate-img {
+	border-radius: 15px;
+}
+.candidate-name {
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
+}
+#edward,
+#musk {
+	text-decoration: none;
+	color: rgb(95, 94, 94);
+}
+#musk {
+	margin-left: 25px;
+}
+button {
+	padding: 12px 25px;
+	margin-top: 40px;
+	font-size: 30px;
+	border-radius: 12px;
+	background-color: rgb(9, 50, 104);
+	border: none;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+	color: white;
+	cursor: pointer;
+	transition: opacity 0.3s, box-shadow 0.3s;
+}
+button:hover {
+	opacity: 0.8;
+}
+button:active {
+	box-shadow: none;
+}
+
+#candidates-info {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 50px;
+	padding: 30px;
+}
+.candidate-info {
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.candidate-props {
+	overflow: auto;
+	padding-top: 20px;
+}
+#edward-abt-img {
+	height: 150px;
+	border-radius: 15px;
+	margin-right: 15px;
+	float: left;
+}
+#musk-abt-img {
+	border-radius: 15px;
+	margin-right: 15px;
+	float: left;
+}
+#cast-ur-vt-btn {
+	display: flex;
+	justify-content: center;
+}
+#cast-ur-vt-btn button {
+	background-color: rgb(129, 5, 5);
+}
+
+@media (max-width: 500px) {
+	#nav-one {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: flex-start;
+		font-size: 22px;
+		background-color: rgb(20, 20, 51);
+		color: white;
+		width: 0px;
+		position: fixed;
+		top: 55px;
+		bottom: 0px;
+		right: 0px;
+		left: unset;
+		z-index: 100;
+		border-top: 1px gray solid;
+		transition: 0.5s;
+	}
+	#nav-one > :first-child {
+		display: none;
+		padding: 15px 0px 15px 25px;
+	}
+	#right-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		padding-right: 5px;
+		width: 100%;
+	}
+	#right-section > a,
+	#dropdown > :first-child {
+		padding: 15px 15px 15px 30px;
+		margin-right: 0px;
+		cursor: pointer;
+		text-decoration: none;
+		width: 100%;
+		color: rgb(146, 142, 142);
+	}
+	#right-section > a:hover,
+	#dropdown > :first-child:hover {
+		background-color: rgb(20, 20, 51);
+		color: white;
+	}
+	#dropdown {
+		padding: 0px;
+		display: inline-block;
+		position: relative;
+	}
+	#dropdown-content {
+		display: none;
+		position: unset;
+		bottom: unset;
+		right: 0px;
+		background-color: rgb(225, 225, 230);
+		width: 100%;
+		box-shadow: none;
+		z-index: 1;
+		transition: 0.5s;
+	}
+	#dropdown-content a {
+		color: black;
+		padding: 12px 16px 12px 50px;
+		text-decoration: none;
+		display: block;
+		transition: 0.5s;
+	}
+	#dropdown-content a:hover {
+		background-color: rgb(216, 206, 206);
+	}
+	#dropdown:hover #dropdown-content {
+		display: none;
+	}
+
+	#nav-two {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 22px;
+		background-color: rgb(20, 20, 51);
+		color: white;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		height: 55px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	#hamburger-logo {
+		display: block;
+		cursor: pointer;
+		color: gray;
+	}
+	#hamburger-logo:hover {
+		color: white;
+	}
+
+	#candidates > div {
+		display: block;
+	}
+	.candidate-img {
+		width: 300px;
+		height: 300px;
+		border-radius: 15px;
+	}
+	#edward {
+		display: block;
+	}
+	#musk {
+		margin-left: 0px;
+		margin-top: 30px;
+		display: block;
+	}
+
+	#candidates-info {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 50px;
+	}
+}
+
+@media (min-width: 500.1px) and (max-width: 600px) {
+	#nav-one {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 22px;
+		background-color: rgb(20, 20, 51);
+		color: white;
+		width: 100%;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		z-index: 100;
+		transition: 0.5s;
+	}
+	nav > :first-child {
+		display: none;
+	}
+
+	#right-section {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		padding-right: 5px;
+	}
+	#right-section > a,
+	#dropdown {
+		padding: 15px;
+		cursor: pointer;
+		text-decoration: none;
+		color: inherit;
+		/* transition: 0.3s; */
+	}
+	#right-section > a:hover,
+	#dropdown:hover {
+		background-color: white;
+		color: rgb(20, 20, 51);
+	}
+	#dropdown {
+		display: inline-block;
+		position: relative;
+	}
+	#dropdown-content {
+		display: none;
+		position: absolute;
+		bottom: -98px;
+		right: 0px;
+		background-color: rgb(225, 225, 230);
+		width: 100%;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
+	#dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+	#dropdown-content a:hover {
+		background-color: rgb(216, 206, 206);
+	}
+	#dropdown:hover #dropdown-content {
+		display: block;
+	}
+
+	#nav-two {
+		display: none;
+	}
+	#hamburger-logo {
+		display: none;
+	}
+
+	#candidates > div {
+		display: block;
+	}
+	.candidate-img {
+		width: 300px;
+		height: 300px;
+		border-radius: 15px;
+	}
+	#edward {
+		display: block;
+	}
+	#musk {
+		margin-left: 0px;
+		margin-top: 30px;
+		display: block;
+	}
+
+	#candidates-info {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 50px;
+	}
+}
+
+@media (min-width: 600.1px) {
+	#nav-one {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 22px;
+		background-color: rgb(20, 20, 51);
+		color: white;
+		width: 100%;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		z-index: 100;
+		transition: 0.5s;
+	}
+	#nav-one > :first-child {
+		padding: 15px 0px 15px 25px;
+	}
+	#right-section {
+		display: flex;
+		justify-content: space-between;
+		padding-right: 5px;
+	}
+	#right-section > a,
+	#dropdown {
+		padding: 15px;
+		cursor: pointer;
+		text-decoration: none;
+		color: inherit;
+		/* transition: 0.3s; */
+	}
+	#right-section > a:hover,
+	#dropdown:hover {
+		background-color: white;
+		color: rgb(20, 20, 51);
+	}
+	#dropdown {
+		display: inline-block;
+		position: relative;
+	}
+	#dropdown-content {
+		display: none;
+		position: absolute;
+		bottom: -98px;
+		right: 0px;
+		background-color: rgb(225, 225, 230);
+		width: 100%;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
+	#dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+	#dropdown-content a:hover {
+		background-color: rgb(216, 206, 206);
+	}
+	#dropdown:hover #dropdown-content {
+		display: block;
+	}
+
+	#nav-two {
+		display: none;
+	}
+	#hamburger-logo {
+		display: none;
+	}
+}

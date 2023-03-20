@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="stylesheets/index.css" />
+		<link rel="stylesheet" href="stylesheets/footer.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<title>Home Page</title>
+	</head>
+	<body>
+		<nav id="nav-one">
+			<div>Online Voting</div>
+			<div id="right-section">
+				<!-- <div>&times;</div> -->
+				<a href="">Home</a>
+				<div id="dropdown">
+					<div id="dropdown-btn">
+						Candidates
+						<!--&#8964;-->
+					</div>
+					<div id="dropdown-content">
+						<a href="#edward-info" onclick="openNav()">Edward</a>
+						<a href="#musk-info" onclick="openNav()">Musk</a>
+					</div>
+				</div>
+				<a href="votingApp.html">Vote</a>
+				<a href="#contacts" onclick="openNav()">Contacts</a>
+			</div>
+		</nav>
+		<div id="nav-two">
+			<div>Online Voting</div>
+			<div id="hamburger-logo" onclick="openNav()">&#9776;</div>
+		</div>
+		<main>
+			<section class="intro">
+				<h1>Vote The Best Tech Lord in US</h1>
+				<div id="candidates">
+					<h2>Our Candidates</h2>
+					<div>
+						<a id="edward" href="#edward-info">
+							<img
+								class="candidate-img"
+								src="images\edward.png"
+								width="200"
+								height="200"
+							/>
+							<div class="candidate-name">Edward Campbell</div>
+						</a>
+						<a id="musk" href="#musk-info">
+							<img class="candidate-img" width="200" src="images\musk.jpeg" />
+							<div class="candidate-name">Elon Musk</div>
+						</a>
+					</div>
+					<a href="votingApp.html"><button>Click to Vote</button></a>
+				</div>
+			</section>
+			<section>
+				<h2>About Our Candidates</h2>
+				<div id="candidates-info">
+					<div class="candidate-info" id="edward-info">
+						<div class="candidate-name">Edward Campbell</div>
+						<div class="candidate-props">
+							<img id="edward-abt-img" width="150" src="images/edward.png" />
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+							Accusamus veritatis hic atque error eligendi soluta repellat
+							praesentium veniam officia? Qui, corrupti aliquid. Provident
+							accusamus ipsam minus iure nesciunt quis, libero facilis saepe
+							pariatur fugit voluptatem ea officiis odit recusandae error
+							dolores. Autem culpa eum nisi officiis sit, perspiciatis soluta
+							odit.
+						</div>
+					</div>
+					<div class="candidate-info" id="musk-info">
+						<div class="candidate-name">Elon Musk</div>
+						<div class="candidate-props">
+							<img id="musk-abt-img" width="150" src="images/musk.jpeg" />
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							Excepturi debitis reprehenderit eaque cupiditate dolorem corporis
+							nihil magnam. Voluptatem dolor odit fugit vero itaque consequatur,
+							porro, blanditiis rem incidunt dignissimos similique optio
+							exercitationem consectetur ab iste molestiae soluta fugiat, nemo
+							quaerat autem quam commodi sequi? Exercitationem esse alias
+							commodi quo quis!
+						</div>
+					</div>
+				</div>
+				<div id="cast-ur-vt-btn">
+					<a href="votingApp.html"><button>Cast Your Vote Now</button></a>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div id="developer-info">
+				<div>Created By: Group 1</div>
+				<div id="contacts">
+					<div>Contacts:</div>
+					<div>08012345678</div>
+					<div>group1channel@edwardspeak.com</div>
+					<div>follow us @:</div>
+					<div id="media-icons">
+						<a href="https://facebook.com">
+							<img src="icons/1654602.png" width="20" />
+						</a>
+						<a href="https://whatsapp.com">
+							<img src="icons/1654597.png" width="20" />
+						</a>
+						<a href="https://twitter.com">
+							<img src="icons/1654624.png" width="20" />
+						</a>
+						<a href="https://linkedin.com">
+							<img src="icons/1654634.png" width="20" />
+						</a>
+						<a href="https://instagram.com">
+							<img src="icons/1654635.png" width="20" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<div>copyrights &copy; All rights reserved</div>
+		</footer>
+
+		<script>
+			const y = document.createElement("div");
+			const openNav = () => {
+				const navOne = document.getElementById("nav-one");
+				if (navOne.style.width === "300px") {
+					navOne.style.width = "0px";
+					y.style.display = "none";
+				} else {
+					navOne.style.width = "300px";
+					y.style =
+						"position: fixed; top: 55px; bottom: 0px; left: 0px; right: 0px; background-color: rgba(0, 0, 0, 0.6); transition: 5s;";
+					document.body.prepend(y);
+				}
+				dropdownContent.style.display = "none";
+				x.style = "backgroundColor: initial; color = gray;";
+			};
+
+			const dispCdts = (event) => {
+				const x = event.target;
+				const dropdownContent = document.getElementById("dropdown-content");
+				if (dropdownContent.style.display === "block") {
+					dropdownContent.style.display = "none";
+					x.style = "backgroundColor: initial; color = gray;";
+				} else {
+					dropdownContent.style.display = "block";
+					x.style = "background-color: gray; color: white;";
+				}
+			};
+			const dropdownContent = document.getElementById("dropdown-content");
+			// const x = dropdownContent.previousElementSibling;
+			const x = document.getElementById("dropdown-btn");
+			x.addEventListener("click", () => {
+				if (dropdownContent.style.display === "block") {
+					dropdownContent.style.display = "none";
+					x.style = "backgroundColor: initial; color = gray;";
+				} else {
+					dropdownContent.style.display = "block";
+					x.style = "background-color: gray; color: white;";
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <meta http-equiv="refresh" content="1" /> -->
+		<link rel="stylesheet" href="stylesheets/voting_app.css" />
+		<link rel="stylesheet" href="stylesheets/footer.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<title>Voting App</title>
+	</head>
+	<body>
+		<main>
+			<section>
+				<h1 style="display: none">HTML5/JavaScript Map</h1>
+				<div style="max-width: 700px">
+					<!-- Keep map above fold -->
+					<div id="map"></div>
+				</div>
+				<div style="visibility: hidden">
+					Please read the
+					<a href="http://simplemaps.com/docs">documentation</a> to learn how to
+					customize this map.
+				</div>
+			</section>
+			<section>
+				<div id="votes-preview">
+					<img width="70" src="images/edward.png" />
+					<div id="votes-bar">
+						<div id="edward-bar"></div>
+					</div>
+					<img width="70" src="images/musk.jpeg" />
+					<div id="votes-count">
+						<div id="edward-count">0 Vote</div>
+						<div id="musk-count">0 Vote</div>
+					</div>
+				</div>
+			</section>
+			<section id="voting-section">
+				<h1>Cast Your Vote</h2>
+				<div>
+					<!-- Select State: -->
+					<div class="dropdown">
+						<button id="state-button" onclick="showAllStates()">
+							Select State
+						</button>
+						<div id="all-states" onmouseleave="hideAllStates()">
+							<div>Select State</div>
+						</div>
+					</div>
+				</div>
+				<div id="candidates">
+					<img
+						id="Edward"
+						class="cdtImgs"
+						onclick="selectCandidate()"
+						title="Edward Campbell"
+						src="images/edward.png"
+						width="70"
+					/>
+					<img
+						id="Musk"
+						class="cdtImgs"
+						onclick="selectCandidate()"
+						title="Elon Musk"
+						src="images/musk.jpeg"
+						width="70"
+					/>
+				</div>
+				<button id="vote-button" class="vote-button" onclick="vote()">
+					Vote
+				</button>
+			</section>
+		</main>
+
+		<footer>
+			<div id="developer-info">
+				<div>Created By: Group 1</div>
+				<div id="contacts">
+					<div>Contacts:</div>
+					<div>08012345678</div>
+					<div>group1channel@edwardspeak.com</div>
+					<div>follow us @:</div>
+					<div id="media-icons">
+						<a href="https://facebook.com">
+							<img src="icons/1654602.png" width="20" />
+						</a>
+						<a href="https://whatsapp.com">
+							<img src="icons/1654597.png" width="20" />
+						</a>
+						<a href="https://twitter.com">
+							<img src="icons/1654624.png" width="20" />
+						</a>
+						<a href="https://linkedin.com">
+							<img src="icons/1654634.png" width="20" />
+						</a>
+						<a href="https://instagram.com">
+							<img src="icons/1654635.png" width="20" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<div>copyrights &copy; All rights reserved</div>
+		</footer>
+
+		<script src="js_scripts/mapdata.js"></script>
+		<script src="js_scripts/usmap.js"></script>
+		<script src="js_scripts/voting_app.js"></script>
+	</body>
+</html>
