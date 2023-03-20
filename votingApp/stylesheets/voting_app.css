@@ -1,0 +1,162 @@
+body {
+	margin: 0px;
+	font-family: Roboto, "Times New Roman", Times, serif;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 100px;
+	background-image: linear-gradient(
+		to right,
+		rgb(235, 168, 168),
+		rgb(199, 222, 230)
+	);
+}
+
+#votes-preview {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+#votes-preview img {
+	border-radius: 10px;
+}
+#votes-bar {
+	height: 30px;
+	width: 500px;
+	background-color: blue;
+	margin: 0px 3px;
+}
+#edward-bar {
+	width: 50%;
+	height: 100%;
+	background-color: red;
+}
+#votes-count {
+	display: flex;
+	justify-content: space-around;
+	/* padding-left: -20px;
+	padding-right: -20px; */
+	font-size: 30px;
+	font-weight: bold;
+	position: absolute;
+	width: 100%;
+	top: -20px;
+}
+#edward-count {
+	color: red;
+}
+#musk-count {
+	color: blue;
+}
+
+#voting-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 6px black solid;
+	width: 490px;
+	/* padding: 0px 150px; */
+}
+h1 {
+	font-size: 30px;
+	font-weight: bold;
+}
+.dropdown {
+	position: relative;
+	display: inline;
+}
+#state-button {
+	background-color: rgb(93, 172, 15);
+	color: white;
+	border: none;
+	border-radius: 40px;
+	padding: 8px 37px;
+	font-size: 20px;
+	margin-bottom: 13px;
+	cursor: pointer;
+}
+#all-states {
+	display: none;
+	position: absolute;
+	border: 1px white solid;
+	/* background-color: #f9f9f9; */
+	background-color: rgb(121, 194, 121);
+	min-width: 100%;
+	height: 250px;
+	overflow: scroll;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	white-space: nowrap;
+	z-index: 1;
+}
+#all-states div {
+	/* color: black; */
+	color: white;
+	border-top: 1px white solid;
+	padding: 12px 16px;
+}
+#all-states div:hover {
+	background-color: #f1f1f1;
+	color: rgb(110, 177, 110);
+}
+#candidates {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 15px;
+}
+.cdtImgs {
+	border-radius: 10px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	transition: -webkit-filter 0.2s;
+}
+#Edward:hover,
+#Musk:hover, .active {
+	-webkit-filter: none;
+	filter: none;
+}
+.vote-button {
+	background-color: rgb(4, 117, 4);
+	color: white;
+	padding: 5px 25px;
+	border: none;
+	border-radius: 40px;
+	font-size: 25px;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+.vote-button:hover,
+#state-button:hover {
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.vote-button:active,
+#state-button:active {
+	box-shadow: none;
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+	#votes-bar {
+		height: 30px;
+		width: 400px;
+		margin: 0px 3px;
+	}
+	#voting-section {
+		border: 6px black solid;
+		width: 390px;
+	}
+}
+
+@media (max-width: 600px) {
+	#votes-bar {
+		height: 25px;
+		width: 300px;
+		margin: 0px 3px;
+	}
+	#voting-section {
+		border: 6px black solid;
+		width: 290px;
+	}
+}
